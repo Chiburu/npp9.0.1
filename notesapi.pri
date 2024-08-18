@@ -23,3 +23,6 @@ unix {
   DEFINES += W32
   LIBS += -L$$NotesCApiPath/lib/mswin32
 }
+
+# Windows で表示される警告を無視
+win32:QMAKE_CXXFLAGS += -wd4503 -wd4005

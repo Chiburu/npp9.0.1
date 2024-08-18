@@ -27,8 +27,8 @@ win32: QMAKE_CXXFLAGS += /utf-8
 DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x050E00
 
 # ソースコード上の NPP090001_EXPORT マクロをエクスポート扱いにする。
-DEFINES += NPP090001_LIBRARY
-# NPP090001_LIBRARY が事前定義されていないとインポート扱いになる。
+DEFINES += NPP9_0_1_LIBRARY
+# NPP9_0_1_LIBRARY が事前定義されていないとインポート扱いになる。
 
 # バージョン
 win32:VERSION = 1.0.0.0
@@ -55,8 +55,21 @@ include(./notesapi.pri)
 # ヘッダーファイル
 HEADERS += \
   include/npp9.0.1/addin.h \
-  include/npp9.0.1/npp_global.h
+  include/npp9.0.1/env.h \
+  include/npp9.0.1/fs.h \
+  include/npp9.0.1/hook.h \
+  include/npp9.0.1/npp_global.h \
+  include/npp9.0.1/os.h \
+  include/npp9.0.1/path.h \
+  include/npp9.0.1/status.h \
+  include/npp9.0.1/utils.h
 
 # ソースファイル
 SOURCES += \
-  src/addin.cpp
+  src/addin.cpp \
+  src/env.cpp \
+  src/fs.cpp \
+  src/hook.cpp \
+  src/os.cpp \
+  src/path.cpp \
+  src/status.cpp

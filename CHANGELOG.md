@@ -1,5 +1,26 @@
 # Change logs for npp9.0.1
 
+## 0.0.2-2024.08.18
+
+- Windows で表示されるコンパイル警告を無視するパラメータを追加
+  - modified: notesapi.pri
+- ライブラリエクスポートを証明するマクロ名を修正
+  - modified: qmake.pro
+- npp2025 から定義を移植
+  - new file: include/npp9.0.1/env.h
+  - new file: include/npp9.0.1/fs.h
+  - new file: include/npp9.0.1/hook.h
+  - new file: include/npp9.0.1/os.h
+  - new file: include/npp9.0.1/path.h
+  - new file: include/npp9.0.1/status.h
+  - new file: include/npp9.0.1/utils.h
+  - new file: src/env.cpp
+  - new file: src/fs.cpp
+  - new file: src/hook.cpp
+  - new file: src/os.cpp
+  - new file: src/path.cpp
+  - new file: src/status.cpp
+
 ## 0.0.1-2024.08.18
 
 - .vscode ディレクトリを追跡対象外にする。
