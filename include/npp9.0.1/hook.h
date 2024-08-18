@@ -88,7 +88,7 @@ public:
     EMHANDLER handler,
     WORD recursionId = 0
   ) {
-    npp::Status status = EMRegister(
+    Status status = EMRegister(
       Hook::eid,
       Hook::regFlags,
       handler,
@@ -128,7 +128,7 @@ WORD NPP_EXPORT createRecursionId();
  */
 template <class Hook>
 std::optional<STATUS> dispatch(EMRECORD *pRec) {
-  return npp::opt_tree<STATUS>(
+  return opt_tree<STATUS>(
     [&pRec] { return pRec->EId == Hook::eid; },
     [&pRec] {
       return pRec->NotificationType == EM_BEFORE

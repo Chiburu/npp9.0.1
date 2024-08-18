@@ -6,3 +6,6 @@ installer/node_modules
 installer/package-lock.json
 installer/work
 installer/local.js
+
+# Linux
+build.sh

@@ -1,5 +1,12 @@
 # Change logs for npp9.0.1
 
+## 0.0.3-2024.08.19-Linux
+
+- `build.sh` を追跡対象外に追加
+  - modified: .gitignore
+- 余分な名前空間指定を削除
+  - modified: include/npp9.0.1/hook.h
+
 ## 0.0.2-2024.08.18
 
 - Windows で表示されるコンパイル警告を無視するパラメータを追加
