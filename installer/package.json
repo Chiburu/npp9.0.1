@@ -1,0 +1,17 @@
+{
+  "name": "npp9.0.1-installer",
+  "version": "1.0.0",
+  "description": "npp9.0.1インストーラ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "tkondoh@chiburu.com",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^3.6.0",
+    "gulp": "^5.0.0",
+    "rxjs": "^7.8.1",
+    "xmlbuilder2": "^3.1.1"
+  }
+}
