@@ -4,6 +4,7 @@ local.pri
 test/x64/local.ini
 installer/node_modules
 installer/package-lock.json
+installer/presets
 installer/work
 installer/local.js
 

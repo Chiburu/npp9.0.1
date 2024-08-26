@@ -9,7 +9,7 @@
 # Notes C API ヘッダーファイルをインクルード先に指定する。
 INCLUDEPATH += $$NotesCApiPath/include
 
-# インポートライブラリnotes.lib/共有オブジェクトnotes.soを指定する。
+# インポートライブラリnotes.lib/共有オブジェクトlibnotes.soを指定する。
 LIBS += -lnotes
 
 # 事前定義マクロ/リンクパスの指定

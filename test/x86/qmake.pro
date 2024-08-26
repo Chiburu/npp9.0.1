@@ -42,4 +42,4 @@ SOURCES += \
 
 # npp9.0.1 リンク
 INCLUDEPATH += ../../include
-LIBS += -lnpp090001_v1 -L../../../build/msvc2019-Qt5.15.2-debug/debug
+LIBS += -lnpp090001d_v1 -L../../../build/msvc2019-Qt5.15.2-debug/debug

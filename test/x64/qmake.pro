@@ -42,4 +42,4 @@ SOURCES += \
 
 # npp9.0.1 リンク
 INCLUDEPATH += ../../include
-LIBS += notes0.obj notesai0.obj -llegacy_stdio_definitions -luser32 -lnpp090001_v1 -L../../../build/msvc2019_64-Qt5.15.2-debug/debug
+LIBS += notes0.obj notesai0.obj -llegacy_stdio_definitions -luser32 -lnpp090001d_v1 -L../../../build/msvc2019_64-Qt5.15.2-debug/debug

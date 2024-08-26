@@ -1,13 +1,16 @@
 # ターゲット名
-win32:TARGET = npp090001_v
+win32 {
+  CONFIG(release,debug|release):TARGET = npp090001_v
+  CONFIG(debug,debug|release):TARGET = npp090001d_v
+}
 # Windows の場合はメジャーバージョンが追加される
 #  npp090001_v1.dll
 unix:TARGET = npp090001
 # Linux の場合は既定の4ファイルが作成される
-#  npp090001.so.1.0.0
-#  npp090001.so.1.0
-#  npp090001.so.1
-#  npp090001.so
+#  libnpp090001.so.1.0.0
+#  libnpp090001.so.1.0
+#  libnpp090001.so.1
+#  libnpp090001.so
 
 # Makefile 生成用テンプレートの指定
 TEMPLATE = lib

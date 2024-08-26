@@ -1,5 +1,17 @@
 # Change logs for npp9.0.1
 
+## 0.0.4-2024.08.26
+
+- installer/presets を追跡対象外にする。
+  - modified: .gitignore
+- ターゲット名(win32) のデバッグ版に `d` を付加する。
+  - modified: qmake.pro
+  - modified: test/x64/qmake.pro
+  - modified: test/x86/qmake.pro
+- gulp スクリプトを accessview2025 ベースで構築したもので置き換える。
+  - modified: installer/gulpfile.js
+  - new file: installer/product.js
+
 ## 0.0.3-2024.08.19-Linux
 
 - `build.sh` を追跡対象外に追加
