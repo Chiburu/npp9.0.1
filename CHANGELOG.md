@@ -1,5 +1,21 @@
 # Change logs for npp9.0.1
 
+## 0.0.4-2024.09.14
+
+- `*.bak` を追跡対象外にする。
+- `*.org` を追跡対象外にする。
+  - modified: .gitignore
+- `arch` 値を、 `PRODUCT` 経由から引数経由に変更
+- `mode` 値を、 `PRODUCT` 経由から引数経由に変更
+  - modified: installer/gulpfile.js
+  - modified: installer/product.js
+- `minimist` をインストール
+- `build:x64:debug` スクリプトを追加
+- `build:x64:release` スクリプトを追加
+- `build:x86:debug` スクリプトを追加
+- `build:x86:release` スクリプトを追加
+  - modified: installer/package.json
+
 ## 0.0.4-2024.08.26
 
 - installer/presets を追跡対象外にする。

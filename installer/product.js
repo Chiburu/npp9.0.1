@@ -11,12 +11,6 @@ const { QT } = require('./local');
  */
 const PRODUCT = {
   VER: '1.0.0.0',
-  OPTIONS: [
-    { arch: 'x64', mode: 'debug' },
-    { arch: 'x64', mode: 'release' },
-    { arch: 'x86', mode: 'debug' },
-    { arch: 'x86', mode: 'release' },
-  ],
   getBaseName: (options, getCompiler) =>
     `setup-npp9.0.1-${getCompiler(options)}-Qt${QT.VER}`,
   WORKDIR: 'work',

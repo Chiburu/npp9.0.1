@@ -4,13 +4,17 @@
   "description": "npp9.0.1インストーラ",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "build:x64:debug": "gulp --arch=x64 --mode=debug",
+    "build:x64:release": "gulp --arch=x64 --mode=release",
+    "build:x86:debug": "gulp --arch=x86 --mode=debug",
+    "build:x86:release": "gulp --arch=x86 --mode=release"
   },
   "author": "tkondoh@chiburu.com",
   "license": "MIT",
   "dependencies": {
     "date-fns": "^3.6.0",
     "gulp": "^5.0.0",
+    "minimist": "^1.2.8",
     "rxjs": "^7.8.1",
     "xmlbuilder2": "^3.1.1"
   }

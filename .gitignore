@@ -10,3 +10,6 @@ installer/local.js
 
 # Linux
 build.sh
+
+*.bak
+*.org

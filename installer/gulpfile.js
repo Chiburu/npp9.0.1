@@ -1,4 +1,5 @@
 const { series } = require('gulp');
+const minimist = require('minimist');
 const { from, zip, concatMap, map } = require('rxjs');
 const { join } = require('path');
 const { removeDirRecursive, makeDir, execute } = require('./presets/common');
@@ -8,6 +9,10 @@ const {
   buildPackage: buildProductPackage,
 } = require('./product');
 const { BINARYCREATOR_PATH } = require('./local');
+
+const { arch, mode } = minimist(process.argv.slice(2), {
+  string: ['arch', 'mode'],
+});
 
 const qtGetCompiler = ({ arch }) => `msvc2019${arch === 'x64' ? '_64' : ''}`;
 
@@ -49,19 +54,14 @@ const buildInstaller = (workDir, baseName, { mode }) => {
 };
 
 function main() {
-  // ワークディレクトリをクリア
-  return removeDirRecursive(PRODUCT.WORKDIR).pipe(
-    // ワークディレクトリを作成
-    concatMap(() => makeDir(PRODUCT.WORKDIR)),
+  const WorkDir = join(PRODUCT.WORKDIR, arch, mode);
 
-    concatMap(() =>
-      from(PRODUCT.OPTIONS).pipe(
-        map((options) => ({
-          workDir: join(PRODUCT.WORKDIR, options.arch, options.mode),
-          options,
-        }))
-      )
-    ),
+  // ワークディレクトリをクリア
+  return removeDirRecursive(WorkDir).pipe(
+    // ワークディレクトリを作成
+    concatMap(() => makeDir(WorkDir)),
+
+    map(() => ({ workDir: WorkDir, options: { arch, mode } })),
 
     // インストーラに含む情報を生成し、ファイルを配置
     concatMap(({ workDir, options }) => {
