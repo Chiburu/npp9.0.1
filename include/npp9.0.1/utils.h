@@ -88,6 +88,38 @@ inline bool weakEq(const QString& lhs, const QString& rhs) {
   return lhs.compare(rhs, Qt::CaseInsensitive) == 0;
 }
 
+/**
+ * @brief リスト要素をすべてtrueと判定したらtrueを返す
+ * @tparam T 要素の型
+ * @param list 元の要素リスト
+ * @param fn 要素を判定する関数
+ * @return true 要素すべてがtrue
+ * @return false 要素のいずれかがfalse
+ */
+template <typename T>
+bool every(const QList<T>& list, std::function<bool(const T&)> fn) {
+  foreach (T item, list) {
+    if (!fn(item)) return false;
+  }
+  return true;
+}
+
+/**
+ * @brief リスト要素のいずれかをtrueと判定したらtrueを返す
+ * @tparam T 要素の型
+ * @param list 元の要素リスト
+ * @param fn 要素を判定する関数
+ * @return true 要素のいずれかががtrue
+ * @return false 要素すべてがfalse
+ */
+template <typename T>
+bool some(const QList<T>& list, std::function<bool(const T&)> fn) {
+  foreach (T item, list) {
+    if (fn(item)) return true;
+  }
+  return false;
+}
+
 } // namespace npp090001
 
 #endif // NPP9_0_1_UTILS_H

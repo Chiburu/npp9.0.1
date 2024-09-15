@@ -1,5 +1,11 @@
 # Change logs for npp9.0.1
 
+## 0.0.5-2024.09.15
+
+- `every<T>` を定義
+- `some<T>` を定義
+  - modified: include\npp9.0.1\utils.h
+
 ## 0.0.4-2024.09.14
 
 - `*.bak` を追跡対象外にする。
